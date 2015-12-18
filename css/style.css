@@ -1,0 +1,120 @@
+/*すべてに共通のCSS*/
+body{
+  margin: 0;
+  background-image: url("../img/autumn_final.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  color:white;
+  font-size: 15px;
+}
+
+.intro-header {
+    padding-top: 20px;
+    text-align: center;
+    background-position: center center ;
+    background-size: cover;
+}
+
+.row{
+    vertical-align: middle;
+}
+
+ul{
+    list-style: none;
+}
+
+.container{
+    text-align: center;
+}
+
+.footer{
+    text-align: center;
+    margin-top: 20%;
+}
+
+/*マテリアル*/
+.hidden{
+  visibility: hidden;
+  height: 0px;
+  width: 0px;
+}
+
+.floatleft{
+    float:left;
+}
+.floatright{
+    float:right;
+}
+.clear{
+    clear:both;
+}
+.space10px{
+    display:block;
+    margin:10px 10px 10px 0;
+}
+
+/*images*/
+.item_img :hover{
+    opacity: 0.5;
+}
+
+
+/*footer*/
+footer {
+    padding: 0px 0;
+    background-color: rgba(255, 151, 65, 0.2);
+}
+a.link{
+        color: white;
+}
+
+
+.btn-orange {
+  font-size: 18px;
+  color: #fff;
+  background-color: #eca14f;
+  margin: 5px 0px 5px 0px;
+  padding: 10px 30px 10px 30px;
+
+}
+
+/*PAGE INDEX*/
+.box {
+            background: #61aeba;
+            border-radius: 3px;
+            padding: 15px 0 15px;
+            margin-bottom: 1em;
+            color: #e7e8ec;
+}
+.box_girl {
+            background: #FF69B4;
+}
+
+/*PAGE QUESIONS*/
+.questionForm{
+  padding-left: 35%;
+}
+.result{
+  margin-left: 5%;
+}
+
+
+/*PAGE RESULT*/
+
+.percentage{
+  text-align: center;
+  font-size: 150px;
+  color: white;
+  font-style: bold;
+}
+
+.comment{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.retry{
+  text-align: center;
+  margin: 20px 0 0 0;
+}

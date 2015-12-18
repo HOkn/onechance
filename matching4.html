@@ -1,0 +1,153 @@
+
+
+<HTML>
+<HEAD>
+<META http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<TITLE>Javascript のサンプル</TITLE>
+<SCRIPT type="text/javascript">
+
+function saiten1(){
+	var n=5;
+	var score;
+	var count;
+	count=0;
+	var kojin= new Array(n);
+	
+	var ave = [1,2,2,3,2];
+	var div= [0.5,0.3,1.0,0.8,1.1];
+	
+	var and1 = new Array(n);
+            for (var i=0; i<n; i++){and1[i]=5*i;}
+	var and2 = new Array(n);
+            for (var i=0; i<n; i++){and2[i]=1+5*i;}
+	var and3 = new Array(n);
+            for (var i=0; i<n; i++){and3[i]=2+5*i;}
+	var and4 = new Array(n);
+            for (var i=0; i<n; i++){and4[i]=3+5*i;}
+	var and5 = new Array(n);
+            for (var i=0; i<n; i++){and5[i]=4+5*i;}
+	
+	for (var i=0; i<n; i++)
+	{
+		if( document.radioB.elements[and1[i]].checked ) kojin[i]=1;
+		if( document.radioB.elements[and2[i]].checked ) kojin[i]=2;
+		if( document.radioB.elements[and3[i]].checked ) kojin[i]=3;
+		if( document.radioB.elements[and4[i]].checked ) kojin[i]=4;
+		if( document.radioB.elements[and5[i]].checked ) kojin[i]=5;
+	}
+	
+    for (var i=0;i<n;i++){
+		if ((kojin[i]>ave[i]-div[i])&&(kojin[i]<ave[i]+div[i])) count++;
+	} 
+	
+       
+    score=count*(100.0/n);
+	alert("あなたは"+score+"点でした！");
+	} 
+	
+
+
+
+
+
+
+function saiten2(){
+	var n=5;
+	var score;
+	score=0;
+	var kojin= new Array(n);
+	
+	var riaave = [1,2,2,3,2];
+	var riadiv = [0.5,0.3,1.0,0.8,1.1];
+	
+        var hiriaave = [2,3,1,2,3];
+	var hiriadiv = [1.0,0.8,1.1,0.5,0.3];
+        
+	var and1 = new Array(n);
+            for (var i=0; i<n; i++){and1[i]=5*i;}
+	var and2 = new Array(n);
+            for (var i=0; i<n; i++){and2[i]=1+5*i;}
+	var and3 = new Array(n);
+            for (var i=0; i<n; i++){and3[i]=2+5*i;}
+	var and4 = new Array(n);
+            for (var i=0; i<n; i++){and4[i]=3+5*i;}
+	var and5 = new Array(n);
+            for (var i=0; i<n; i++){and5[i]=4+5*i;}
+	
+	for (var i=0; i<n; i++)
+	{
+		if( document.radioB.elements[and1[i]].checked ) kojin[i]=1;
+		if( document.radioB.elements[and2[i]].checked ) kojin[i]=2;
+		if( document.radioB.elements[and3[i]].checked ) kojin[i]=3;
+		if( document.radioB.elements[and4[i]].checked ) kojin[i]=4;
+		if( document.radioB.elements[and5[i]].checked ) kojin[i]=5;
+	}
+	
+  
+	
+
+            var ria=0;
+            var hiria=0;
+		for(var i=0;i<n;i++){
+                    ria+=(kojin[i]-riaave[i])*(kojin[i]-riaave[i])/(riadiv[i]*riadiv[i]);
+                }
+                
+                for(var i=0;i<n;i++){
+                   hiria+=(kojin[i]-hiriaave[i])*(kojin[i]-hiriaave[i])/(hiriadiv[i]*hiriadiv[i]);
+                }
+    
+                score=100*ria/(hiria+ria);
+				
+	alert("あなたは"+score+"点でした！");//見込みは
+
+}
+
+
+
+
+
+
+</SCRIPT>
+</HEAD>
+<BODY>
+	<form name="radioB">
+		質問1<br>
+		<input type="radio" name="Q1">まったくそうでない<br>
+		<input type="radio" name="Q1">どちらかといえばそうでない<br>
+		<input type="radio" name="Q1">どちらともいえない<br>
+		<input type="radio" name="Q1">どちらかといえばそうである<br>
+		<input type="radio" name="Q1">まったくそうである<br>
+		<br>
+		質問2<br>
+		<input type="radio" name="Q2">まったくそうでない<br>
+		<input type="radio" name="Q2">どちらかといえばそうでない<br>
+		<input type="radio" name="Q2">どちらともいえない<br>
+		<input type="radio" name="Q2">どちらかといえばそうである<br>
+		<input type="radio" name="Q2">まったくそうである<br>
+		<br>
+		質問3<br>
+		<input type="radio" name="Q3">まったくそうでない<br>
+		<input type="radio" name="Q3">どちらかといえばそうでない<br>
+		<input type="radio" name="Q3">どちらともいえない<br>
+		<input type="radio" name="Q3">どちらかといえばそうである<br>
+		<input type="radio" name="Q3">まったくそうである<br>
+		<br>
+		質問4<br>
+		<input type="radio" name="Q4">まったくそうでない<br>
+		<input type="radio" name="Q4">どちらかといえばそうでない<br>
+		<input type="radio" name="Q4">どちらともいえない<br>
+		<input type="radio" name="Q4">どちらかといえばそうである<br>
+		<input type="radio" name="Q4">まったくそうである<br>
+		<br>
+		質問5<br>
+		<input type="radio" name="Q5">まったくそうでない<br>
+		<input type="radio" name="Q5">どちらかといえばそうでない<br>
+		<input type="radio" name="Q5">どちらともいえない<br>
+		<input type="radio" name="Q5">どちらかといえばそうである<br>
+		<input type="radio" name="Q5">まったくそうである<br>
+		<br>
+		<input type="button" value="採点" onclick="saiten2()" />
+	</form>
+
+</BODY> 
+</HTML>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ワンチャンメーター</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" style="text/css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script>
+        function load(){
+            //?以降の文字を取得する
+            var data = location.search.substring(1, location.search.length);
+            //エスケープされた文字をアンエスケープする
+            data = unescape(data);
+            //htmlの書き換え
+            obj1 = document.getElementById("result");
+            obj1.innerHTML=data+"%";
+            obj2 = document.getElementById("com");
+            if(data>80){
+                obj2.innerHTML="次がある！！！";
+            }
+            else if(data>60){
+                obj2.innerHTML="一発逆転！！！";
+            }
+            else if(data>50){
+                obj2.innerHTML="ワンチャンあるで！！！";
+            }
+            else if(data>40){
+                obj2.innerHTML="これは狙い目！！！";
+            }
+            else{
+                obj2.innerHTML="いくっきゃないでしょ！！！";
+            }
+        }
+    </script>
+
+    <!-- Twitterシェア -->
+    <script>
+window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+  </script>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body onload="load()">
+
+    <div class="intro-header" style=" padding-bottom: 20px;">
+      <div class="intro-message">
+        <div class="btn-signup btn-orange">
+            もうあの人に恋人がいる可能性は・・・
+          </div>
+      </div>
+    </div>
+
+      <div class="percentage"><p id="result"></p></div>
+      <div class="comment"><p id="com"></p></div>
+      
+      <div class="retry">
+
+
+          <!-- シェアボタンに変換される -->
+          <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true">Tweet</a><br>
+
+        <a href="index.html" class = "btn btn-danger">トップに戻る</a>
+      </div>
+
+
+    <footer>
+      <div class="footer">
+          <h5><a href="aboutus.html" class="link">ABOUT US</a></h5>
+      </div>
+    </footer>
+
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

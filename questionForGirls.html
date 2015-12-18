@@ -1,0 +1,118 @@
+<!-- 注意TODO：value順番になるように hidden radioを配置する -->
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>ワンチャンメーター</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" style="text/css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="check.js"></script>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="intro-header" style=" padding-bottom: 20px;">
+      <div class="intro-message">
+      <div class="btn-signup btn-orange">
+        あの人は・・・
+      </div>
+      </div>
+    </div>
+
+    <div class="questionForm">
+    <form name="radioB">
+        <p>【1】周りからの好感度は・・・<br>
+            <ul class ="question">
+                <li><label><input type="radio" name="Q1" value="1">とてもわるい</label></li>
+                <li><label><input type="radio" name="Q1" value="2">わるい</label></li>
+                <li><label><input type="radio" name="Q1" value="3">平均的</label></li>
+                <li><label><input type="radio" name="Q1" value="4">よい</label></li>
+                <li><label><input type="radio" name="Q1" value="5">とてもよい</label></li>
+            </ul>
+        </p>
+        <p>【2】現役？浪人？<br>
+            <ul class ="question">
+                <li><label><input type="radio" name="Q2" value="1">浪人</label></li>
+                <li><label><input type="radio" name="Q2" value="5">現役</label></li>
+                <li class="hidden"><input type="radio">none</li>
+                <li class="hidden"><input type="radio">none</li>
+                <li class="hidden"><input type="radio">none</li>
+            </ul>
+        </p>
+        <p>【3】第二外国語は・・・<br>
+            <ul class ="question">
+                <li><label><input type="radio" name="Q3" value="5">スペイン語</label></li>
+                <li><label><input type="radio" name="Q3" value="1">ドイツ語</label></li>
+                <li><label><input type="radio" name="Q3" value="1">ロシア語</label></li>
+                <li><label><input type="radio" name="Q3" value="5">フランス語</label></li>
+                <li><label><input type="radio" name="Q3" value="3">その他</label></li>
+            </ul>
+        </p>
+        <p>【4】家は・・・<br>
+            <ul class ="question">
+                <li><label><input type="radio" name="Q4" value="1">実家</label></li>
+                <li><label><input type="radio" name="Q4" value="5">一人暮らし</label></li>
+                <li class="hidden"><input type="radio">none</li>
+                <li class="hidden"><input type="radio">none</li>
+                <li class="hidden"><input type="radio">none</li>
+            </ul>
+        </p>
+        <p>【5】高校は・・・<br>
+            <ul class ="question">
+                <li><label><input type="radio" name="Q5" value="1">別学</label></li>
+                <li><label><input type="radio" name="Q5" value="5">共学</label></li>
+                <li class="hidden"><input type="radio">none</li>
+                <li class="hidden"><input type="radio">none</li>
+                <li class="hidden"><input type="radio">none</li>
+            </ul>
+        </p>
+        <p>【6】育った街は・・・<br>
+            <ul class ="question">
+                <li><label><input type="radio" name="Q6" value="1">とても田舎</label></li>
+                <li><label><input type="radio" name="Q6" value="2">田舎</label></li>
+                <li><label><input type="radio" name="Q6" value="3">都会でも田舎でもない</label></li>
+                <li><label><input type="radio" name="Q6" value="4">都会</label></li>
+                <li><label><input type="radio" name="Q6" value="5">とても都会</label></li>
+            </ul>
+        </p>
+        <p>【7】バイトは・・・<br>
+            <ul class ="question">
+                <li><label><input type="radio" name="Q7" value="1">していない</label></li>
+                <li><label><input type="radio" name="Q7" value="2">あまりしていない</label></li>
+                <li><label><input type="radio" name="Q7" value="3">適度な頻度</label></li>
+                <li><label><input type="radio" name="Q7" value="4">結構している</label></li>
+                <li><label><input type="radio" name="Q7" value="5">社畜</label></li>
+            </ul>
+        </p>
+
+    </form>
+
+
+    <div class="check">
+      <input class="btn btn-danger result" type ="button" value="判定する" onclick="saiten2()">
+    </div>
+  </div>
+
+
+
+
+    <footer>
+      <div class="footer">
+          <h5><a href="aboutus.html" class="link">ABOUT US</a></h5>
+      </div>
+    </footer>
+
+
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
